@@ -1,0 +1,60 @@
+\documentclass[11pt,letterpaper]{article}
+
+\usepackage[letterpaper,margin=1in]{geometry}
+
+\usepackage[backend=biber,style=numeric,sorting=none]{biblatex}
+\addbibresource{main.bib}
+
+\usepackage[]{authblk}
+\renewcommand\Affilfont{\itshape\small}
+
+\usepackage{caption}
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{textcomp}
+
+
+% No indentation
+\setlength\parindent{0pt}
+
+\pagenumbering{arabic}
+
+% Title, authors and affiliations
+\title{The latest shit}
+\author[1]{Me}
+
+\affil[1]{My Institute}
+
+\begin{document}
+
+\maketitle
+% \thispagestyle{empty}
+
+\begin{abstract}
+  \input{./sections/abstract}
+\end{abstract}
+
+% \newpage
+% \clearpage
+% \setcounter{page}{1}
+
+% \raggedright
+
+\section{Introduction}
+\input{./sections/introduction}
+
+\section{Materials and Methods}
+\input{./sections/materials_and_methods}
+
+\section{Results}
+\input{./sections/results}
+
+\section{Conclusions}
+\input{./sections/conclusions}
+
+\section{References}
+\printbibliography[heading=none]
+
+\end{document}
